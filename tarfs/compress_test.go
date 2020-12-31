@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/concourse/go-archive/tarfs"
+	"github.com/cocornd/go-archive/tarfs"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

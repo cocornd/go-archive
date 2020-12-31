@@ -10,7 +10,7 @@ import (
 )
 
 func Compress(dest io.Writer, workDir string, paths ...string) error {
-	if runtime.GOOS != "windows" {
+	if runtime.GOOS != "windows" || os.Getenv("SHELL") != "" {
 		if tarPath, err := exec.LookPath("tar"); err == nil {
 			return tarCompress(tarPath, dest, workDir, paths...)
 		}

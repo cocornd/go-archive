@@ -12,7 +12,7 @@ import (
 )
 
 func Extract(src io.Reader, dest string) error {
-	if runtime.GOOS != "windows" {
+	if runtime.GOOS != "windows" || os.Getenv("SHELL") != "" {
 		tarPath, err := exec.LookPath("tar")
 		if err == nil {
 			return tarExtract(tarPath, src, dest)

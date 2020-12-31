@@ -8,11 +8,11 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/concourse/go-archive/tarfs"
+	"github.com/cocornd/go-archive/tarfs"
 )
 
 func Extract(src io.Reader, dest string) error {
-	if runtime.GOOS != "windows" {
+	if runtime.GOOS != "windows" || os.Getenv("SHELL") != "" {
 		tarPath, err := exec.LookPath("tar")
 		if err == nil {
 			return tarExtract(tarPath, src, dest)

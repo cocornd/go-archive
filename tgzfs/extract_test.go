@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/concourse/go-archive/archivetest"
-	"github.com/concourse/go-archive/tgzfs"
+	"github.com/cocornd/go-archive/archivetest"
+	"github.com/cocornd/go-archive/tgzfs"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
